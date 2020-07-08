@@ -6,7 +6,7 @@ The aim of this project is compile a list of Node best practices, and implement 
 
 ## Architecture
 
-- Adopt a !['clean' architecture](https://github.com/ireoostacchini/demo20.api.node/blob/master/docs/demo20.node.api.png)
+- Adopt a clean' architecture !['](https://github.com/ireoostacchini/demo20.api.node/blob/master/docs/demo20.node.api.png)
 
 - Delegate anything possible (e.g. gzip, SSL) to a reverse proxy)
 - Measure and guard memory usage
