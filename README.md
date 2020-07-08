@@ -6,8 +6,17 @@ The aim of this project is compile a list of Node best practices, and implement 
 
 ## Architecture
 
-- Adopt a 'clean' architecture !['](https://github.com/ireoostacchini/demo20.api.node/blob/master/docs/demo20.node.api.png)
-
+- Adopt a ['clean' architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/):
+  - Controllers 
+    - receive DTOs from requests; they perform initial validation and pass the DTOs down to the Business Logic layer
+    - inject concrete implementations (e.g. Data Services, API Clients) into the Business Logic layer
+  - The Business Logic layer 
+    - maps DTOs to / from Entities, and uses them with the injected data / API services
+    - has no knowledge of concrete implementation (data, external APIs, file system)
+  - The Entities layer
+    - contains classes representing domain objects
+    - has no dependencies and no knowledge of concrete implementation or business logic
+- !['](https://github.com/ireoostacchini/demo20.api.node/blob/master/docs/demo20.node.api.png)
 - Delegate anything possible (e.g. gzip, SSL) to a reverse proxy)
 - Measure and guard memory usage
 
@@ -127,6 +136,12 @@ The aim of this project is compile a list of Node best practices, and implement 
 - *Collect unit test coverage measurements
 - Add data per-test (e.g. use a separate API to load data into a database, and call it before each test)
 - Use a production-like environment for e2e testing
+
+
+
+## Documentation
+
+- Document API errors using Swagger or GraphQL
 
 
 
