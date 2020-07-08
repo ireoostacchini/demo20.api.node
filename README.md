@@ -4,6 +4,15 @@ The aim of this project is compile a list of Node best practices, and implement 
 
 
 
+## Architecture
+
+- Adopt a !['clean' architecture](https://github.com/ireoostacchini/demo20.api.node/blob/master/docs/demo20.node.api.png)
+
+- Delegate anything possible (e.g. gzip, SSL) to a reverse proxy)
+- Measure and guard memory usage
+
+
+
 ## Code
 
 - Use Conditional Requests -eg:
@@ -121,14 +130,6 @@ The aim of this project is compile a list of Node best practices, and implement 
 
 
 
-## Architecture
-
-- Delegate anything possible (e.g. gzip, SSL) to a reverse proxy)
-
-- Measure and guard the memory usage
-
-
-
 ## Build
 
 - Be sure that production code uses the exact version of the packages you have tested it with
@@ -140,8 +141,8 @@ The aim of this project is compile a list of Node best practices, and implement 
 ## Sources
 
 - [10 Best Practices for Writing Node.js REST APIs](https://blog.risingstack.com/10-best-practices-for-writing-node-js-rest-apis/)
-
 - [20 ways to become a better Node.js developer in 2020](https://medium.com/@me_37286/20-ways-to-become-a-better-node-js-developer-in-2020-d6bd73fcf424)
+- [A quick introduction to clean architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/)
 - [Common Node.js security best practices](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/commonsecuritybestpractices.md)
 - [JavaScript Stack 2020](https://gregberge.com/blog/javascript-stack-2020)
 - [Make your code production-ready](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/production/productioncode.md)
