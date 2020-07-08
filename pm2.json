@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "demo20apinode",
+      "script": "."
+    },
+    {
+      "name": "demo20apinode_debug",
+      "script": ".",
+      "node_args": ["--inspect"]
+    }
+  ],
+  "comment": "//## Guard and restart the process upon failure (eg using PM2, or a platform service)"
+}

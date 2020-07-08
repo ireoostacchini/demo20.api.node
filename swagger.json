@@ -1,0 +1,33 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.1"
+  },
+  "basePath": "/api",
+  "paths": {
+    "/swagger.json": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Returns the swagger.json document"
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/api/countries": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Returns countries"
+          }
+        },
+        "parameters": []
+      }
+    }
+  }
+}

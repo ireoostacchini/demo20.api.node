@@ -1,0 +1,67 @@
+{
+  "name": "demo20-api-node",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "engines": {
+    "node": ">=12.18.1"
+  },
+  "scripts": {
+    "start": "node app.js | ./node_modules/.bin/pino-pretty",
+    "start:log": "node app.js > _info.json 2> _errors.json",
+    "start:prod": "cross-env NODE_ENV=production node app.js",
+    "pm2": " ./node_modules/.bin/pm2 restart pm2.json --only demo20apinode",
+    "pm2:debug": "./node_modules/.bin/pm2 restart pm2.json --only demo20apinode_debug --watch",
+    "pm2:cluster": "./node_modules/.bin/pm2 restart pm2.json --only demo20apinode -i 0",
+    "pm2:list": "./node_modules/.bin/pm2 list",
+    "pm2:delete": "./node_modules/.bin/pm2 delete pm2.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "e2e": "cross-env BASE_URL=http://127.0.0.1:3000/api jest --config=./jest.config.e2e.json",
+    "e2e:watch": "cross-env BASE_URL=http://127.0.0.1:3000/api jest --config=./jest.config.e2e.json --watch"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "body-parser": "^1.13.3",
+    "convict": "^6.0.0",
+    "convict-format-with-validator": "^6.0.0",
+    "cookie-parser": "^1.3.3",
+    "cross-env": "^7.0.2",
+    "express": "^4.13.3",
+    "express-pino-logger": "^5.0.0",
+    "express-rate-limit": "^5.1.3",
+    "helmet": "^3.23.3",
+    "knex": "^0.21.1",
+    "method-override": "^3.0.0",
+    "pg": "^8.2.1",
+    "pino": "^6.3.2",
+    "pm2": "^4.4.0",
+    "swagger-spec-express": "^2.0.23",
+    "swagger-ui-express": "^4.1.4",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "@supercharge/strings": "^1.9.0",
+    "axios": "^0.19.2",
+    "debug": "^2.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-security": "^1.4.0",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-nodemon": "^2.0.2",
+    "gulp-plumber": "^1.0.0",
+    "jest": "^26.1.0",
+    "pino-pretty": "^4.0.0",
+    "prettier": "^2.0.5"
+  },
+  "comments": {
+    "test:coveraage": "//## Collect unit test coverage measurements",
+    "start:prod": "//## Use a production-like environment for e2e testing",
+    "pm2:cluster": "//## Utilize all CPU cores (e.g. via PM2)"
+  }
+}
