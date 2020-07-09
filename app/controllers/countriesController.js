@@ -38,7 +38,7 @@ swagger.common.addModel({
 const countriesController = (() => {
   registerRoutes = (router, business, db, api, logger) => {
     router
-      .post('/countries/add', async (req, res, next) => {
+      .post('/countries', async (req, res, next) => {
         //## wrap all routes with a catch
         try {
           //## Fail fast, validate incoming JSON schemas using a dedicated library (Joi)

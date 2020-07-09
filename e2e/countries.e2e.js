@@ -21,7 +21,7 @@ describe('countries', () => {
     const countryToAdd = new AddCountryDto(Str.random(50), Str.random(3));
 
     const result = await axios.post(
-      `${process.env.BASE_URL}/countries/add`,
+      `${process.env.BASE_URL}/countries`,
       countryToAdd
     );
 
