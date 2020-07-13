@@ -1,12 +1,14 @@
 # Node API Best practices
 
-The aim of this project is to compile a list of Node best practices, and implement as many of them as possible in a demo node project (these are prefixed with *).
+This project contains a curated list of Node best practices, implemented in a minimal, pro-level node project.
+
+Implemented best practices are prefixed with *.
 
 
 
 ## Architecture
 
-- Adopt a ['clean' architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/):
+- *Adopt a ['clean' architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/):
   - Controllers 
     - receive DTOs from requests; they perform initial validation and pass the DTOs down to the Business Logic layer
     - inject concrete implementations (e.g. Data Services, API Clients) into the Business Logic layer
