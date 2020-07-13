@@ -1,6 +1,6 @@
 # Node API Best practices
 
-This project contains a curated list of Node best practices, implemented in a minimal, pro-level node project.
+This project contains a curated list of Node API best practices, implemented in a minimal, pro-level API.
 
 Implemented best practices are prefixed with *.
 
