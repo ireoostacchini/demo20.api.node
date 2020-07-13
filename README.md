@@ -1,6 +1,6 @@
 # Node API Best practices
 
-The aim of this project is compile a list of Node best practices, and implement as many of them as possible in the code (these are prefixed with *).
+The aim of this project is to compile a list of Node best practices, and implement as many of them as possible in a demo node project (these are prefixed with *).
 
 
 
